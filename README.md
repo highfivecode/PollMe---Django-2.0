@@ -7,3 +7,6 @@ A polling application built with Python and Django
 ### [Video 8 - First App](https://github.com/highfivecode/PollMe---Django-2.0/tree/c33f211f5408ce7af1dc2ba5daa59dc1aa4f5b45) 
 ### [Video 9 - First Model](https://github.com/highfivecode/PollMe---Django-2.0/tree/aa7b580ca1dc7497c6b6657387fd2cc522dcb01c)  
 ### [Video 10 - Creating And Saving Objects](https://github.com/highfivecode/PollMe---Django-2.0/tree/8df9757f36b36a3f47a76fa3676309ad48e5858e) - No changes to code (we added objects to the database in the shell)  
+### [Video 11 - Querysets](https://github.com/highfivecode/PollMe---Django-2.0/tree/8df9757f36b36a3f47a76fa3676309ad48e5858e) - No changes to code  
+### [Video 12 - CRUD and the admin panel](https://github.com/highfivecode/PollMe---Django-2.0/tree/23d7f9836536907b3f8268f33167289da098e511)   
+
