@@ -1,14 +1,5 @@
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<html lang="en">
-
-<head>
-  <title>PollMe | Home</title>
-</head>
-
-<body>
-  <h1>Welcome to PollMe!</h1>
-  <p>The current datetime is: {{ datetime_now }} </p>
-</body>
-
-</html>
+{% block content %}
+<h1>Welcome to PollMe!</h1>
+{% endblock %}
