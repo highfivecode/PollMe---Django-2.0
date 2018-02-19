@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 # Create your views here.
 def polls_list(request):
-    return HttpResponse('polls list')
+    return render(request, 'polls/polls_list.html')
