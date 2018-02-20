@@ -12,3 +12,4 @@ A polling application built with Python and Django
 ### [Video 13 - Including the Polls urls](https://github.com/highfivecode/PollMe---Django-2.0/tree/b88fa855cda4573d25f7526937eb827ab9b02cb3)   
 ### [Video 14 - Polls and Templates](https://github.com/highfivecode/PollMe---Django-2.0/tree/5faafe1b940eff93e37a7f91848bdd71112e032c)  
 ### [Video 15 - Template Inheritance](https://github.com/highfivecode/PollMe---Django-2.0/tree/7cf0e0f9b247a8bc02b23e3124015bdd18a7ceaa)  
+### [Video 16 - Managing Static Files](https://github.com/highfivecode/PollMe---Django-2.0/tree/2c18a9791d8eb6c2e8e68e336f24bfef81ce8ec4) 
