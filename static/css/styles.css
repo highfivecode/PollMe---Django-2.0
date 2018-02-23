@@ -1,3 +1,12 @@
-h1 {
-  color: red;
+h1, h3 {
+  color: white;
+}
+
+body {
+  background-image:  url('../img/mikael_kristenson_unsplash_background.jpg');
+}
+
+#home-content {
+  text-align: center;
+  padding-top: 20%;
 }
