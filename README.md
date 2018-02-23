@@ -19,5 +19,6 @@ A polling application built with Python and Django
 ### [Video 20 - The Include Tag and Custom CSS Block](https://github.com/highfivecode/PollMe---Django-2.0/tree/cb0065a391b3fb2a769619a9c2800d7a4783c2d6) 
 ### [Video 21 - The URL Tag and Namespaces](https://github.com/highfivecode/PollMe---Django-2.0/tree/ab6829fc3fdebf6cd93c4a310d52a43b1e089424) 
 ### [Video 22 - Using Querysets in the Templates](https://github.com/highfivecode/PollMe---Django-2.0/tree/5316fc7ebec45f07dd28404271910851875af314) 
+### [Video 23 - Foreign Key Relationships and the Choice Model](https://github.com/highfivecode/PollMe---Django-2.0/tree/5ae96f977c7bcd052d1d40d0dba194bc7b289383) 
 
 
