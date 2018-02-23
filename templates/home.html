@@ -1,4 +1,10 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block custom_css %}
+  <link rel='stylesheet' type='text/css' href="{% static 'css/home_styles.css' %}">
+{% endblock %}
+
 
 {% block content %}
 
