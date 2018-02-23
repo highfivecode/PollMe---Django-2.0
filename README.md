@@ -17,7 +17,7 @@ A polling application built with Python and Django
 ### [Video 18 - Bootstrap 4 Navbar](https://github.com/highfivecode/PollMe---Django-2.0/tree/05bbed00088acd96969f678d1f5a6747c5633269) 
 ### [Video 19 - Bootstrap 4 HomePage](https://github.com/highfivecode/PollMe---Django-2.0/tree/4357db3892855646730731217db15eff770e4791) 
 ### [Video 20 - The Include Tag and Custom CSS Block](https://github.com/highfivecode/PollMe---Django-2.0/tree/cb0065a391b3fb2a769619a9c2800d7a4783c2d6) 
-### [Video 22 - The URL Tag and Namespaces](https://github.com/highfivecode/PollMe---Django-2.0/tree/ab6829fc3fdebf6cd93c4a310d52a43b1e089424) 
-### [Video 23 - Using Querysets in the Templates](https://github.com/highfivecode/PollMe---Django-2.0/tree/5316fc7ebec45f07dd28404271910851875af314) 
+### [Video 21 - The URL Tag and Namespaces](https://github.com/highfivecode/PollMe---Django-2.0/tree/ab6829fc3fdebf6cd93c4a310d52a43b1e089424) 
+### [Video 22 - Using Querysets in the Templates](https://github.com/highfivecode/PollMe---Django-2.0/tree/5316fc7ebec45f07dd28404271910851875af314) 
 
 
