@@ -15,4 +15,4 @@ A polling application built with Python and Django
 ### [Video 16 - Managing Static Files](https://github.com/highfivecode/PollMe---Django-2.0/tree/2c18a9791d8eb6c2e8e68e336f24bfef81ce8ec4)  
 ### [Video 17 - Installing Bootstrap 4](https://github.com/highfivecode/PollMe---Django-2.0/tree/1baea09a2bf47170ac406715eac2310adf9b94d8) 
 ### [Video 18 - Bootstrap 4 Navbar](https://github.com/highfivecode/PollMe---Django-2.0/tree/05bbed00088acd96969f678d1f5a6747c5633269) 
-
+### [Video 19 - Bootstrap 4 HomePage](https://github.com/highfivecode/PollMe---Django-2.0/tree/4357db3892855646730731217db15eff770e4791) 
