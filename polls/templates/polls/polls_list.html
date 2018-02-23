@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Welcome to Poll List!</h1>
+<div class="container">
+  <h1>Welcome to Poll List!</h1>
+  <ul>
+  {% for poll in polls %}
+    <li>{{ poll }}</li>
+  {% endfor %}
+  </ul>
+</div>
 {% endblock %}
