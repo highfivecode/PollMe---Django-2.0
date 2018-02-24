@@ -20,5 +20,14 @@ def poll_detail(request, poll_id):
     """
     # poll = Poll.objects.get(id=poll_id)
     poll = get_object_or_404(Poll, id=poll_id)
+
+    if request.method == "POST":
+        print(request.POST)
+        print("YOU POSTED!!!!!!!!!")
+
+    if request.method == "GET":
+        print(request.GET)
+        print("YOU GET ME!!!!!!!!!!!")
+
     context = {'poll': poll}
     return render(request, 'polls/poll_detail.html', context)
