@@ -6,6 +6,11 @@
   <ul>
   {% for poll in polls %}
     <li>{{ poll }}</li>
+      <ul>
+        {% for choice in poll.choice_set.all %}
+          <li>{{ choice.choice_text }}</li>
+        {% endfor %}
+      </ul>
   {% endfor %}
   </ul>
 </div>
