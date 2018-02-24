@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 
-from .models import Poll
+from .models import Choice, Poll
 
 # Create your views here.
 def polls_list(request):
@@ -31,3 +31,10 @@ def poll_detail(request, poll_id):
 
     context = {'poll': poll}
     return render(request, 'polls/poll_detail.html', context)
+
+def poll_vote(request, poll_id):
+    choice_id = request.POST['choice']
+    choice = Choice.objects.get(id=choice_id)
+    choice.votes += 1
+    choice.save()
+    return HttpResponse('Poll Id: {}'.format(poll_id))
