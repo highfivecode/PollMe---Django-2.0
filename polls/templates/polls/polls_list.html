@@ -5,12 +5,7 @@
   <h1>Welcome to Poll List!</h1>
   <ul>
   {% for poll in polls %}
-    <li>{{ poll }}</li>
-      <ul>
-        {% for choice in poll.choice_set.all %}
-          <li>{{ choice.choice_text }}</li>
-        {% endfor %}
-      </ul>
+    <li><a href="{% url 'polls:detail' poll.id %}">{{ poll }}</a></li>
   {% endfor %}
   </ul>
 </div>

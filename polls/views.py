@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import HttpResponse
 
 from .models import Poll
@@ -14,4 +14,11 @@ def polls_list(request):
     return render(request, 'polls/polls_list.html', context)
 
 def poll_detail(request, poll_id):
-    return HttpResponse('Youre looking for poll with and id off: {}'.format(poll_id))
+    """
+    Render the poll_detail.html template which allows a user to vote
+    on the choices of a poll
+    """
+    # poll = Poll.objects.get(id=poll_id)
+    poll = get_object_or_404(Poll, id=poll_id)
+    context = {'poll': poll}
+    return render(request, 'polls/poll_detail.html', context)
