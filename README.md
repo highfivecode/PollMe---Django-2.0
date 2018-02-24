@@ -21,5 +21,5 @@ A polling application built with Python and Django
 ### [Video 22 - Using Querysets in the Templates](https://github.com/highfivecode/PollMe---Django-2.0/tree/5316fc7ebec45f07dd28404271910851875af314) 
 ### [Video 23 - Foreign Key Relationships and the Choice Model](https://github.com/highfivecode/PollMe---Django-2.0/tree/5ae96f977c7bcd052d1d40d0dba194bc7b289383) 
 ### [Video 24 -  Accessing Many-To-One ](https://github.com/highfivecode/PollMe---Django-2.0/tree/5ae96f977c7bcd052d1d40d0dba194bc7b289383)  - No changes to code, we explored the "choice_set" manager that is now available to objects of the Poll class.  
-
+### [Video 25 - Adding Choices to Our Template](https://github.com/highfivecode/PollMe---Django-2.0/tree/adccb8b649611d45398fd1cde67988d7ac42c994) 
 
