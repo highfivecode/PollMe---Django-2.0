@@ -1,6 +1,7 @@
 from django.contrib import messages
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
+from django.urls import reverse
 
 from .models import Choice, Poll
 
@@ -34,4 +35,5 @@ def poll_vote(request, poll_id):
         choice.save()
     else:
         messages.error(request, 'No Choice Was Found!')
+        return HttpResponseRedirect(reverse("polls:detail", args=(poll_id,)))
     return render(request, 'polls/poll_results.html', {'poll': poll})
