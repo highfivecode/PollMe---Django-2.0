@@ -37,7 +37,8 @@ def poll_vote(request, poll_id):
     choice_id = request.POST.get('choice')
     if choice_id:
         choice = Choice.objects.get(id=choice_id)
+        poll = choice.question
         choice.votes += 1
         choice.save()
-        return HttpResponse('Poll Id: {}'.format(poll_id))
-    return HttpResponse("No Choice Inputted!")
+        return render(request, 'polls/poll_results.html', {'poll': poll})
+    return render(request, 'polls/poll_results.html', {'error': True})
