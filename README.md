@@ -32,4 +32,5 @@ A polling application built with Python and Django
 ### [Video 33 - Django Messages Framework](https://github.com/highfivecode/PollMe---Django-2.0/tree/253e06a9e6d80c05f52be31e27020ed57b8ca209) 
 ### [Video 34 - Redirecting And Reversing URLs in Views](https://github.com/highfivecode/PollMe---Django-2.0/tree/79f661c5b8c85e8e8f73ee91c10b6d4c94fe67c8) 
 ### [Video 35 - The Django Request Object](https://github.com/highfivecode/PollMe---Django-2.0/tree/79f661c5b8c85e8e8f73ee91c10b6d4c94fe67c8)  - No changes to code, we explored the request object and how we use it with authenticated (or not authenticated) users.  
+### [Video 36 - Authentication and Logins](https://github.com/highfivecode/PollMe---Django-2.0/tree/8690324a5e70ee1c6a9f9a46bdd83cc5f2579426)  
 
