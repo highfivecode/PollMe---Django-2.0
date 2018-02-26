@@ -1,5 +1,6 @@
-from django.shortcuts import get_object_or_404, render
+from django.contrib import messages
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404, render
 
 from .models import Choice, Poll
 
@@ -20,25 +21,17 @@ def poll_detail(request, poll_id):
     """
     # poll = Poll.objects.get(id=poll_id)
     poll = get_object_or_404(Poll, id=poll_id)
-
-    if request.method == "POST":
-        print(request.POST)
-        print("YOU POSTED!!!!!!!!!")
-
-    if request.method == "GET":
-        print(request.GET)
-        print("YOU GET ME!!!!!!!!!!!")
-
     context = {'poll': poll}
     return render(request, 'polls/poll_detail.html', context)
 
 def poll_vote(request, poll_id):
     # try:
+    poll = get_object_or_404(Poll, id=poll_id)
     choice_id = request.POST.get('choice')
     if choice_id:
         choice = Choice.objects.get(id=choice_id)
-        poll = choice.question
         choice.votes += 1
         choice.save()
-        return render(request, 'polls/poll_results.html', {'poll': poll})
-    return render(request, 'polls/poll_results.html', {'error': True})
+    else:
+        messages.error(request, 'No Choice Was Found!')
+    return render(request, 'polls/poll_results.html', {'poll': poll})
