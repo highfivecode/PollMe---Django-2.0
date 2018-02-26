@@ -28,6 +28,5 @@ A polling application built with Python and Django
 ### [Video 29 - Get Versus Post and Views](https://github.com/highfivecode/PollMe---Django-2.0/tree/aa36c5656747b5cca2bc7f1aa4ad27c5ac957d9f) 
 ### [Video 30 - Saving Votes to the Database](https://github.com/highfivecode/PollMe---Django-2.0/tree/6b572e1e88c2a178028af7d6e568ac00eac51cf5) 
 ### [Video 31 - Validating Post Input](https://github.com/highfivecode/PollMe---Django-2.0/tree/9f9a0a719648dfb86581e74537cad7621c399547) 
-
-
+### [Video 32 - Getting Poll Results](https://github.com/highfivecode/PollMe---Django-2.0/tree/190a8a60e44e798e658e545ba9ea3ecdd37f6379) 
 
