@@ -9,7 +9,11 @@
       <a class="nav-item nav-link" href="{% url 'polls:list' %}">Polls</a>
     </div>
     <div class="navbar-nav ml-auto">
-      <a class="nav-item nav-link" href="{% url 'accounts:login' %}">Login</a>
+      {% if request.user.is_authenticated %}
+        <a class="nav-item nav-link" href="{% url 'accounts:logout' %}">Logout</a>
+      {% else %}
+        <a class="nav-item nav-link" href="{% url 'accounts:login' %}">Login</a>
+      {% endif %}
     </div>
   </div>
 </nav>

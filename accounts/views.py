@@ -1,5 +1,5 @@
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
@@ -18,3 +18,7 @@ def login_user(request):
             messages.error(request, 'Bad username or password')
 
     return render(request, 'accounts/login.html', {})
+
+def logout_user(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('home'))
