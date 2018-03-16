@@ -26,5 +26,10 @@ def logout_user(request):
     return HttpResponseRedirect(reverse('home'))
 
 def user_registration(request):
-    form = UserRegistrationForm()
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            print(form)
+    else:
+        form = UserRegistrationForm()
     return render(request, 'accounts/register.html', {'form': form})
