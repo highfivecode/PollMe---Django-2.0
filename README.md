@@ -37,4 +37,6 @@ A polling application built with Python and Django
 ### [Video 38 - The Login View](https://github.com/highfivecode/PollMe---Django-2.0/tree/5f867676dd09a7b56e3513b9bb29903c8b88f858)  
 ### [Video 39 - How To Log A User Out](https://github.com/highfivecode/PollMe---Django-2.0/tree/ec1462715ab694dc3c23b7f4c48f95e0595ea661)  
 ### [Video 40 - Introduction to the Form Class](https://github.com/highfivecode/PollMe---Django-2.0/tree/234bb1dcb2d231e27203b95b71c8a5eea9af198a)  
+### [Video 40 - Django User Registration Part 1](https://github.com/highfivecode/PollMe---Django-2.0/tree/fff2cb16c0382be2c4dd3306c51e60afb3eeadbe)  
+
 
