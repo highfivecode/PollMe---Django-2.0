@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
@@ -29,7 +30,11 @@ def user_registration(request):
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            print(form)
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = User.objects.create_user(username, password=password)
+            messages.success(request, 'Thanks for registering {}'.format(user.username))
+            return HttpResponseRedirect(reverse('accounts:login'))
     else:
         form = UserRegistrationForm()
     return render(request, 'accounts/register.html', {'form': form})
