@@ -2,10 +2,23 @@
 
 {% block content %}
 
-  <form action="" method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="submit">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 offset-sm-3">
+        <p>Already have an account? <a href="{% url 'accounts:login' %}">Login Here!</a></p>
+        <form action="" method="post">
+          {% csrf_token %}
+          {% for field in form %}
+            <div class="form-group">
+              {{ field.errors }}
+              {{ field.label_tag }}
+              {{ field }}
+            </div>
+          {% endfor %}
+          <input type="submit" value="submit" class='btn btn-primary'>
+      </div>
+    </div>
+  </div>
   </form>
 
 {% endblock %}
