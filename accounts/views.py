@@ -31,11 +31,11 @@ def user_registration(request):
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            # user = User.objects.create_user(username, password=password)
-            # messages.success(request, 'Thanks for registering {}'.format(user.username))
-            # return HttpResponseRedirect(reverse('accounts:login'))
-            print('form was valid')
+            password = form.cleaned_data['password1']
+            email = form.cleaned_data['email']
+            user = User.objects.create_user(username, email=email, password=password)
+            messages.success(request, 'Thanks for registering {}'.format(user.username))
+            return HttpResponseRedirect(reverse('accounts:login'))
     else:
         form = UserRegistrationForm()
     return render(request, 'accounts/register.html', {'form': form})
