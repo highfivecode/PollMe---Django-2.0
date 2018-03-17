@@ -9,9 +9,8 @@ class Poll(models.Model):
         return self.text
 
 class Choice(models.Model):
-    question = models.ForeignKey(Poll, on_delete=models.CASCADE)
+    poll = models.ForeignKey(Poll, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=255)
-    votes = models.IntegerField(default=0)
 
     def __str__(self):
-        return "{} - {}".format(self.question.text[:25], self.choice_text[:25])
+        return "{} - {}".format(self.poll.text[:25], self.choice_text[:25])

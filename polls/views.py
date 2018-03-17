@@ -30,6 +30,15 @@ def add_poll(request):
             new_poll = form.save(commit=False)
             new_poll.pub_date = datetime.datetime.now()
             new_poll.save()
+            new_choice1 = Choice(
+                                    poll = new_poll,
+                                    choice_text=form.cleaned_data['choice1']
+                                ).save()
+            new_choice2 = Choice(
+                                    poll = new_poll,
+                                    choice_text=form.cleaned_data['choice2']
+                                ).save()
+            return redirect('polls:list')
     else:
         form = PollForm()
     context = {'form': form}
