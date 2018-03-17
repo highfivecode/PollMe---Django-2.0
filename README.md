@@ -53,3 +53,5 @@ A polling application built with Python and Django
 ### [Video 54 - Adding Extra Fields To A Model Form](https://github.com/highfivecode/PollMe---Django-2.0/tree/5bdafea078874388dceea922115cd021f8d7dd45)  
 ### [Video 55 - Saving a ModelForm using Commit False](https://github.com/highfivecode/PollMe---Django-2.0/tree/97f0e9e51fabcb48b5759575ba341668be9db2b4)  
 ### [Video 56 - Saving Our Choices To The New Poll](https://github.com/highfivecode/PollMe---Django-2.0/tree/c6928521791c16138545fb04c1aa92325164d0d6)  
+### [Video 57 - Showing Bootstrap Alerts to the User](https://github.com/highfivecode/PollMe---Django-2.0/tree/e1812cfb164ae70907043863d6134288e73a5d5b)  
+
