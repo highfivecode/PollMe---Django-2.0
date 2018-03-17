@@ -2,7 +2,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse
 
 from .forms import UserRegistrationForm
@@ -16,7 +16,7 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse('home'))
+            return redirect('home')
         else:
             messages.error(request, 'Bad username or password')
 
@@ -24,7 +24,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return HttpResponseRedirect(reverse('home'))
+    return redirect('accounts:login')
 
 def user_registration(request):
     if request.method == 'POST':
@@ -35,7 +35,7 @@ def user_registration(request):
             email = form.cleaned_data['email']
             user = User.objects.create_user(username, email=email, password=password)
             messages.success(request, 'Thanks for registering {}'.format(user.username))
-            return HttpResponseRedirect(reverse('accounts:login'))
+            return redirect('accounts:login')
     else:
         form = UserRegistrationForm()
     return render(request, 'accounts/register.html', {'form': form})
