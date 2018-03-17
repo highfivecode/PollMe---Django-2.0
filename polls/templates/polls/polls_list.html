@@ -13,6 +13,16 @@
   <h1 class='text-center'>Welcome to Poll List!</h1>
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
+      {% if messages %}
+          {% for message in messages %}
+          <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{message}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+             </button>
+          </div>
+          {% endfor %}
+      {% endif %}
       <a href="{% url 'polls:add' %}" class="btn btn-primary" style="margin-bottom: 5px">Add <i class="fas fa-plus"></i> </a>
       <div class="list-group">
         {% for poll in polls %}

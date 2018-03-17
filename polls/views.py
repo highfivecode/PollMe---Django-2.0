@@ -38,6 +38,11 @@ def add_poll(request):
                                     poll = new_poll,
                                     choice_text=form.cleaned_data['choice2']
                                 ).save()
+            messages.success(
+                            request,
+                            'Poll and Choices added!',
+                            extra_tags='alert alert-success alert-dismissible fade show'
+                            )
             return redirect('polls:list')
     else:
         form = PollForm()
