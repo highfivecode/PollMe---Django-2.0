@@ -1,12 +1,29 @@
 {% extends 'base.html' %}
 
+{% block extra_head %}
+<script
+    defer
+    src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+    integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+    crossorigin="anonymous"></script>
+{% endblock %}
+
 {% block content %}
 <div class="container">
-  <h1>Welcome to Poll List!</h1>
-  <ul>
-  {% for poll in polls %}
-    <li><a href="{% url 'polls:detail' poll.id %}">{{ poll }}</a></li>
-  {% endfor %}
-  </ul>
+  <h1 class='text-center'>Welcome to Poll List!</h1>
+  <div class="row">
+    <div class="col-sm-8 offset-sm-2">
+      <button class="btn btn-primary" style="margin-bottom: 5px">Add <i class="fas fa-plus"></i> </button>
+      <div class="list-group">
+        {% for poll in polls %}
+        <a
+          href="{% url 'polls:detail' poll.id %}"
+          class="list-group-item list-group-item-action">
+          {{ poll }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
