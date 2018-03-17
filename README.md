@@ -48,5 +48,6 @@ A polling application built with Python and Django
 ### [Video 49 - Redirect vs. HttpResponseRedirect](https://github.com/highfivecode/PollMe---Django-2.0/tree/f91124ba897be5bb4b84218d8b178d4da1721c22)  
 ### [Video 50 - Limiting Access To Logged In Users](https://github.com/highfivecode/PollMe---Django-2.0/tree/67b357449a4fa71b27c40950a3015a5e56390f54)  
 ### [Video 51 - Redirecting Back To Next After Login](https://github.com/highfivecode/PollMe---Django-2.0/tree/a4e3821236da953261821581f71814aa87cc70f8)  
+### [Video 52 - Font Awesome And Styling Polls List](https://github.com/highfivecode/PollMe---Django-2.0/tree/e870818a46ee7a9e267ffb77d6db345b9791e05a)  
 
 
