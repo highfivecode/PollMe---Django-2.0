@@ -1,3 +1,5 @@
+import datetime
+
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
@@ -22,7 +24,14 @@ def polls_list(request):
 
 @login_required
 def add_poll(request):
-    form = PollForm()
+    if request.method == "POST":
+        form = PollForm(request.POST)
+        if form.is_valid():
+            new_poll = form.save(commit=False)
+            new_poll.pub_date = datetime.datetime.now()
+            new_poll.save()
+    else:
+        form = PollForm()
     context = {'form': form}
     return render(request, 'polls/add_poll.html', context)
 
