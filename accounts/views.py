@@ -16,7 +16,8 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            redirect_url = request.GET.get('next', 'home')
+            return redirect(redirect_url)
         else:
             messages.error(request, 'Bad username or password')
 
