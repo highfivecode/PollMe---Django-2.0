@@ -1,7 +1,9 @@
+from django.contrib.auth.models import User
 from django.db import models
 
 # Create your models here.
 class Poll(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     text = models.CharField(max_length=255)
     pub_date = models.DateField()
 

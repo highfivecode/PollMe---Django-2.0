@@ -29,6 +29,7 @@ def add_poll(request):
         if form.is_valid():
             new_poll = form.save(commit=False)
             new_poll.pub_date = datetime.datetime.now()
+            new_poll.owner = request.user
             new_poll.save()
             new_choice1 = Choice(
                                     poll = new_poll,
@@ -66,9 +67,10 @@ def poll_vote(request, poll_id):
     poll = get_object_or_404(Poll, id=poll_id)
     choice_id = request.POST.get('choice')
     if choice_id:
-        choice = Choice.objects.get(id=choice_id)
-        choice.votes += 1
-        choice.save()
+        print(choice_id)
+    #     choice = Choice.objects.get(id=choice_id)
+    #     # choice.votes += 1
+    #     # choice.save()
     else:
         messages.error(request, 'No Choice Was Found!')
         return HttpResponseRedirect(reverse("polls:detail", args=(poll_id,)))
