@@ -65,4 +65,4 @@ A polling application built with Python and Django
 ### [Video 66 - Deleting Polls](https://github.com/highfivecode/PollMe---Django-2.0/tree/22c531cd17048cc98ef7e118799fa1abe98c54b2) 
 ### [Video 67 - ForeignKeys, On_Delete, And the Vote Model](https://github.com/highfivecode/PollMe---Django-2.0/tree/fa6ac79f45f4d6be436578140ae186d5a04f132a) 
 ### [Video 68 - Creating Votes Using Views](https://github.com/highfivecode/PollMe---Django-2.0/tree/b16d09e98a79afce689efbaeb8cc4df0ff778a8b) 
-
+### [Video 69 - Checking If A User Has Already Voted](https://github.com/highfivecode/PollMe---Django-2.0/tree/8921730e8d4bcb28ba8e3f0f0a33a51296ee9ca0) 
