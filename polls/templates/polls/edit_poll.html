@@ -18,6 +18,12 @@
         <input type="submit" value="submit" class='btn btn-primary'>
         <a href="{% url 'polls:add_choice' poll.id %}" class='btn btn-warning'>Add Choice</a>
       </form>
+
+    <h3 class='text-center'>Choices</h3>
+    {% for choice in poll.choice_set.all %}
+      <p><a href="{% url 'polls:edit_choice' choice.id %}"><i class="fas fa-pencil-alt"></i></a> {{choice.choice_text}}</p>
+    {% endfor %}
+
     </div>
   </div>
 </div>

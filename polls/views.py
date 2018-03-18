@@ -93,7 +93,25 @@ def add_choice(request, poll_id):
         form = ChoiceForm()
     return render(request, 'polls/add_choice.html', {'form':form})
 
+def edit_choice(request, choice_id):
+    choice = get_object_or_404(Choice, id=choice_id)
+    poll = get_object_or_404(Poll, id=choice.poll.id)
+    if request.user != poll.owner:
+        return redirect('/')
 
+    if request.method == "POST":
+        form = ChoiceForm(request.POST, instance=choice)
+        if form.is_valid():
+            form.save()
+            messages.success(
+                            request,
+                            'Choice Edited Successfully',
+                            extra_tags='alert alert-success alert-dismissible fade show'
+                            )
+            return redirect('polls:list')
+    else:
+        form = ChoiceForm(instance=choice)
+    return render(request, 'polls/add_choice.html', {'form':form, 'edit_mode': True})
 
 @login_required
 def poll_detail(request, poll_id):
