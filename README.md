@@ -67,3 +67,4 @@ A polling application built with Python and Django
 ### [Video 68 - Creating Votes Using Views](https://github.com/highfivecode/PollMe---Django-2.0/tree/b16d09e98a79afce689efbaeb8cc4df0ff778a8b) 
 ### [Video 69 - Checking If A User Has Already Voted](https://github.com/highfivecode/PollMe---Django-2.0/tree/8921730e8d4bcb28ba8e3f0f0a33a51296ee9ca0) 
 ### [Video 70 - Stopping The User From Voting More Than Once](https://github.com/highfivecode/PollMe---Django-2.0/tree/d384b3cf99d6f9c1dac144e73447464ea1d12f61) 
+### [Video 71 - Getting The Total Number Of Votes](https://github.com/highfivecode/PollMe---Django-2.0/tree/4a4ec70b9e88cb3b76d2aa8d541802883957a52c) 
