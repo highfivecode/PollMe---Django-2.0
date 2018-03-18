@@ -7,7 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 
-from .models import Choice, Poll
+from .models import Choice, Poll, Vote
 
 from .forms import PollForm, EditPollForm, ChoiceForm
 
@@ -166,10 +166,9 @@ def poll_vote(request, poll_id):
     poll = get_object_or_404(Poll, id=poll_id)
     choice_id = request.POST.get('choice')
     if choice_id:
-        print(choice_id)
-    #     choice = Choice.objects.get(id=choice_id)
-    #     # choice.votes += 1
-    #     # choice.save()
+        choice = Choice.objects.get(id=choice_id)
+        new_vote = Vote(user=request.user, poll=poll, choice=choice)
+        new_vote.save()
     else:
         messages.error(request, 'No Choice Was Found!')
         return HttpResponseRedirect(reverse("polls:detail", args=(poll_id,)))
