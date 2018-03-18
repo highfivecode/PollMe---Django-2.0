@@ -16,3 +16,9 @@ class Choice(models.Model):
 
     def __str__(self):
         return "{} - {}".format(self.poll.text[:25], self.choice_text[:25])
+
+
+class Vote(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    poll = models.ForeignKey(Poll, on_delete=models.CASCADE)
+    choice = models.ForeignKey(Choice, on_delete=models.CASCADE)
