@@ -158,7 +158,8 @@ def poll_detail(request, poll_id):
     # poll = Poll.objects.get(id=poll_id)
     poll = get_object_or_404(Poll, id=poll_id)
     user_can_vote = poll.user_can_vote(request.user)
-    context = {'poll': poll, 'user_can_vote': user_can_vote}
+    results = poll.get_results_dict()
+    context = {'poll': poll, 'user_can_vote': user_can_vote, 'results': results}
     return render(request, 'polls/poll_detail.html', context)
 
 @login_required

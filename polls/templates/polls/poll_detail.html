@@ -26,9 +26,15 @@
   <br/>
 
 {% endfor %}
-
 <input type="submit" value="Vote" {% if not user_can_vote %}disabled{% endif %}/>
 
 </form>
+
+{% for choice_dict in results %}
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: {{choice_dict.percentage}}%;">{{choice_dict.num_votes}}</div>
+  </div>
+{% endfor %}
+
 
 {% endblock %}

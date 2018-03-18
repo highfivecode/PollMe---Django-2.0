@@ -24,6 +24,31 @@ class Poll(models.Model):
     def num_votes(self):
         return self.vote_set.count()
 
+    def get_results_dict(self):
+        """
+        Returns a list of objects in the form:
+        [
+            # for each related choice
+            {
+                'text': choice_text,
+                'num_votes': number of votes on that choice
+                'percentage': num_votes / poll.num_votes * 100
+            }
+        ]
+        """
+        res = []
+        for choice in self.choice_set.all():
+            d = {}
+            d['text'] = choice.choice_text
+            d['num_votes'] = choice.num_votes
+            if not self.num_votes:
+                d['percentage'] = 0
+            else:
+                d['percentage'] = choice.num_votes / self.num_votes * 100
+            res.append(d)
+        return res
+
+
 class Choice(models.Model):
     poll = models.ForeignKey(Poll, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=255)
