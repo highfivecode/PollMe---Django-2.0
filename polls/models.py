@@ -20,6 +20,10 @@ class Poll(models.Model):
             return False
         return True
 
+    @property
+    def num_votes(self):
+        return self.vote_set.count()
+
 class Choice(models.Model):
     poll = models.ForeignKey(Poll, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=255)
@@ -27,6 +31,9 @@ class Choice(models.Model):
     def __str__(self):
         return "{} - {}".format(self.poll.text[:25], self.choice_text[:25])
 
+    @property
+    def num_votes(self):
+        return self.vote_set.count()
 
 class Vote(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

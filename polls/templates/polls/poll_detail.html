@@ -11,7 +11,7 @@
 {% endif %}
 
 <h1>Poll Detail Page</h1>
-{{poll}}
+{{poll}} - {{poll.num_votes}} votes
 
 <form action="{% url 'polls:vote' poll.id %}" method="post">
 {% csrf_token %}
@@ -22,7 +22,7 @@
          name="choice"
          id="choice{{ forloop.counter }}"
          value="{{choice.id}}"/>
-  <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+  <label for="choice{{ forloop.counter }}">{{ choice.choice_text }} - {{ choice.num_votes }}</label>
   <br/>
 
 {% endfor %}
