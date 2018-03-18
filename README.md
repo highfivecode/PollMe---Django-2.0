@@ -69,3 +69,5 @@ A polling application built with Python and Django
 ### [Video 70 - Stopping The User From Voting More Than Once](https://github.com/highfivecode/PollMe---Django-2.0/tree/d384b3cf99d6f9c1dac144e73447464ea1d12f61) 
 ### [Video 71 - Getting The Total Number Of Votes](https://github.com/highfivecode/PollMe---Django-2.0/tree/4a4ec70b9e88cb3b76d2aa8d541802883957a52c) 
 ### [Video 72 - Displaying Progress Bars](https://github.com/highfivecode/PollMe---Django-2.0/tree/63c0de683e5a2621d395f3bf7315405b72dbc9f2) 
+### [Video 73 - Styling The Vote Page](https://github.com/highfivecode/PollMe---Django-2.0/tree/7fcfa858e64fcf1d82e581c7484f8702150c73f2) 
+
