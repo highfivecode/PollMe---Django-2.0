@@ -51,6 +51,23 @@ def add_poll(request):
     return render(request, 'polls/add_poll.html', context)
 
 @login_required
+def delete_poll(request, poll_id):
+    poll = get_object_or_404(Poll, id=poll_id)
+    if request.user != poll.owner:
+        return redirect('/')
+
+    if request.method == "POST":
+        poll.delete()
+        messages.success(
+                        request,
+                        'Poll Deleted Successfully',
+                        extra_tags='alert alert-success alert-dismissible fade show'
+                        )
+        return redirect('polls:list')
+
+    return render(request, 'polls/delete_poll_confirm.html', {'poll':poll})
+
+@login_required
 def edit_poll(request, poll_id):
     poll = get_object_or_404(Poll, id=poll_id)
     if request.user != poll.owner:

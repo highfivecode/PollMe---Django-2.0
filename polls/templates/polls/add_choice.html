@@ -25,7 +25,6 @@
         <input type="submit" value="submit" class='btn btn-primary'>
         {% if edit_mode %}
           <a href="{% url 'polls:choice_confirm_delete' choice.id %}"
-              type="button"
               class='btn btn-danger'>
               <i class="far fa-trash-alt"></i> Delete
           </a>
