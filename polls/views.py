@@ -9,7 +9,7 @@ from django.urls import reverse
 
 from .models import Choice, Poll
 
-from .forms import PollForm, EditPollForm
+from .forms import PollForm, EditPollForm, ChoiceForm
 
 # Create your views here.
 @login_required
@@ -69,7 +69,21 @@ def edit_poll(request, poll_id):
     else:
         form = EditPollForm(instance=poll)
 
-    return render(request, 'polls/edit_poll.html', {'form': form})
+    return render(request, 'polls/edit_poll.html', {'form': form, 'poll':poll})
+
+@login_required
+def add_choice(request, poll_id):
+    poll = get_object_or_404(Poll, id=poll_id)
+    if request.user != poll.owner:
+        return redirect('/')
+
+    if request.method == "POST":
+        form = ChoiceForm(request.POST)
+    else:
+        form = ChoiceForm()
+    return render(request, 'polls/add_choice.html', {'form':form})
+
+
 
 @login_required
 def poll_detail(request, poll_id):

@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="container">
-  <h1 class='text-center'>Edit Poll Using Form Below</h1>
+  <h1 class='text-center'>Add A New Choice Using Form Below</h1>
   <div class="row">
     <div class="col-sm-6 offset-sm-3">
       <form action="" method="post">
@@ -16,7 +16,6 @@
         </div>
         {% endfor %}
         <input type="submit" value="submit" class='btn btn-primary'>
-        <a href="{% url 'polls:add_choice' poll.id %}" class='btn btn-warning'>Add Choice</a>
       </form>
     </div>
   </div>

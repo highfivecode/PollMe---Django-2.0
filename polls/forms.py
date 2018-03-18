@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Poll
+from .models import Choice, Poll
 
 class PollForm(forms.ModelForm):
 
@@ -30,3 +30,9 @@ class EditPollForm(forms.ModelForm):
         widgets = {
             'text': forms.Textarea(attrs={"class":"form-control", "rows": 5, "cols": 20})
         }
+
+class ChoiceForm(forms.ModelForm):
+
+    class Meta:
+        model = Choice
+        fields = ['choice_text']
