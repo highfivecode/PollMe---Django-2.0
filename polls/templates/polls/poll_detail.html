@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="container">
 
 {% if messages %}
   <ul class="messages">
@@ -10,8 +11,7 @@
   </ul>
 {% endif %}
 
-<h1>Poll Detail Page</h1>
-{{poll}} - {{poll.num_votes}} votes
+<p>{{poll}} - {{poll.num_votes}} votes</p>
 
 <form action="{% url 'polls:vote' poll.id %}" method="post">
 {% csrf_token %}
@@ -26,15 +26,26 @@
   <br/>
 
 {% endfor %}
-<input type="submit" value="Vote" {% if not user_can_vote %}disabled{% endif %}/>
+<input class='btn btn-primary mb-2' type="submit" value="Vote" {% if not user_can_vote %}disabled{% endif %}/>
 
 </form>
 
-{% for choice_dict in results %}
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: {{choice_dict.percentage}}%;">{{choice_dict.num_votes}}</div>
-  </div>
-{% endfor %}
+{% if not user_can_vote %}
 
+    {% for choice_dict in results %}
+    <div class="row">
+        <div class="col-sm-6">
+        {{choice_dict.text}}
+        <div class="progress mb-1">
+          <div class="progress-bar" role="progressbar" style="width: {{choice_dict.percentage}}%;">{{choice_dict.num_votes}}</div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
 
+{% else %}
+  <p>Vote to see results!</p>
+{% endif %}
+
+</div>
 {% endblock %}

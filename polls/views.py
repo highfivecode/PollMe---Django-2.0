@@ -169,7 +169,7 @@ def poll_vote(request, poll_id):
 
     if not poll.user_can_vote(request.user):
         messages.error(request, 'Are you crazy? You have already voted on this poll!')
-        return HttpResponseRedirect(reverse("polls:detail", args=(poll_id,)))
+        return redirect('polls:detail', poll_id=poll_id)
 
     choice_id = request.POST.get('choice')
     if choice_id:
@@ -178,5 +178,5 @@ def poll_vote(request, poll_id):
         new_vote.save()
     else:
         messages.error(request, 'No Choice Was Found!')
-        return HttpResponseRedirect(reverse("polls:detail", args=(poll_id,)))
-    return render(request, 'polls/poll_results.html', {'poll': poll})
+        return redirect('polls:detail', poll_id=poll_id)
+    return redirect('polls:detail', poll_id=poll_id)
