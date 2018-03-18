@@ -62,4 +62,5 @@ A polling application built with Python and Django
 ### [Video 63 - Finishing The Add Choice View](https://github.com/highfivecode/PollMe---Django-2.0/tree/d1344f3e45d1164fd08d98b7084e5abef426c011)  
 ### [Video 64 - Editing Choices](https://github.com/highfivecode/PollMe---Django-2.0/tree/2b2b699770f61ad2ab8d3b9888a6f7d7c70b7f0e)  
 ### [Video 65 - Deleting Choices](https://github.com/highfivecode/PollMe---Django-2.0/tree/3bee8e44c512459801aeafd473e333be39d1b916)  
+### [Video 66 - Deleting Polls](https://github.com/highfivecode/PollMe---Django-2.0/tree/22c531cd17048cc98ef7e118799fa1abe98c54b2) 
 
