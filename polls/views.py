@@ -51,6 +51,13 @@ def add_poll(request):
     return render(request, 'polls/add_poll.html', context)
 
 @login_required
+def edit_poll(request, poll_id):
+    poll = get_object_or_404(Poll, id=poll_id)
+    if request.user != poll.owner:
+        return redirect('/')
+    return render(request, 'polls/edit_poll.html', {'poll':poll})
+
+@login_required
 def poll_detail(request, poll_id):
     """
     Render the poll_detail.html template which allows a user to vote

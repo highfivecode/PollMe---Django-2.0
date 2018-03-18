@@ -29,7 +29,7 @@
         <li class="list-group-item">
           <a href="{% url 'polls:detail' poll.id %}">{{ poll }}</a>
           {% if request.user == poll.owner %}
-            <a href="" class='float-right'><i class="fas fa-pencil-alt"></i></a>
+            <a href="{% url 'polls:edit_poll' poll.id %}" class='float-right'><i class="fas fa-pencil-alt"></i></a>
           {% endif %}
         </li>
         {% endfor %}
