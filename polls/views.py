@@ -79,6 +79,16 @@ def add_choice(request, poll_id):
 
     if request.method == "POST":
         form = ChoiceForm(request.POST)
+        if form.is_valid():
+            new_choice = form.save(commit=False)
+            new_choice.poll = poll
+            new_choice.save()
+            messages.success(
+                            request,
+                            'Choice Added Successfully',
+                            extra_tags='alert alert-success alert-dismissible fade show'
+                            )
+            return redirect('polls:list')
     else:
         form = ChoiceForm()
     return render(request, 'polls/add_choice.html', {'form':form})
