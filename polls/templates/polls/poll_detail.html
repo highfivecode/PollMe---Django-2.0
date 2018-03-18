@@ -27,7 +27,7 @@
 
 {% endfor %}
 
-<input type="submit" value="Vote"/>
+<input type="submit" value="Vote" {% if not user_can_vote %}disabled{% endif %}/>
 
 </form>
 
