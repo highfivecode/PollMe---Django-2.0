@@ -24,15 +24,16 @@
           {% endfor %}
       {% endif %}
       <a href="{% url 'polls:add' %}" class="btn btn-primary" style="margin-bottom: 5px">Add <i class="fas fa-plus"></i> </a>
-      <div class="list-group">
+      <ul class="list-group">
         {% for poll in polls %}
-        <a
-          href="{% url 'polls:detail' poll.id %}"
-          class="list-group-item list-group-item-action">
-          {{ poll }}
-        </a>
+        <li class="list-group-item">
+          <a href="{% url 'polls:detail' poll.id %}">{{ poll }}</a>
+          {% if request.user == poll.owner %}
+            <a href="" class='float-right'><i class="fas fa-pencil-alt"></i></a>
+          {% endif %}
+        </li>
         {% endfor %}
-      </div>
+      </ul>
     </div>
   </div>
 </div>
