@@ -72,4 +72,4 @@ A polling application built with Python and Django
 ### [Video 73 - Styling The Vote Page](https://github.com/highfivecode/PollMe---Django-2.0/tree/7fcfa858e64fcf1d82e581c7484f8702150c73f2) 
 ### [Video 74 - Seeding The Database](https://github.com/highfivecode/PollMe---Django-2.0/tree/7fcfa858e64fcf1d82e581c7484f8702150c73f2) - No changes to code. We seeded the database with faked data using seeder.py
 ### [Video 75 - Django Pagination View](https://github.com/highfivecode/PollMe---Django-2.0/tree/0ee3c455d48283cc402c0ca9a4140cb1ea4f8efd) 
-
+### [Video 76 - Django Pagination Template](https://github.com/highfivecode/PollMe---Django-2.0/tree/55d0bdfb55a6c546c55e4bddd44cc34adbd7ef17) 
