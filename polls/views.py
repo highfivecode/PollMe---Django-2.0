@@ -20,7 +20,7 @@ def polls_list(request):
     currently available polls
     """
     polls = Poll.objects.all()
-    my_polls = Poll.objects.filter(owner=request.user)
+    paginator = Paginator(polls, 5)
 
     page = request.GET.get('page')
     polls = paginator.get_page(page)
