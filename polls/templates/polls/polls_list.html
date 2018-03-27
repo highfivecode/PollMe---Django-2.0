@@ -17,6 +17,21 @@
           {% endfor %}
       {% endif %}
 
+      <a
+          href="?text=True"
+          class="btn btn-{% if 'text' in request.GET %}warning{% else %}primary{% endif %}"
+          style="margin-bottom: 5px">Text
+      </a>
+      <a
+          href="?pub_date=True"
+          class="btn btn-{% if 'pub_date' in request.GET %}warning{% else %}primary{% endif %}"
+          style="margin-bottom: 5px">Pub_date
+      </a>
+      <a
+          href="?num_votes=True"
+          class="btn btn-{% if 'num_votes' in request.GET %}warning{% else %}primary{% endif %}"
+          style="margin-bottom: 5px">Num_votes
+      </a>
       <a href="{% url 'polls:add' %}" class="btn btn-primary" style="margin-bottom: 5px">Add <i class="fas fa-plus"></i> </a>
 
       <ul class="list-group">
