@@ -4,6 +4,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse
 
@@ -19,6 +20,10 @@ def polls_list(request):
     currently available polls
     """
     polls = Poll.objects.all()
+    paginator = Paginator(polls, 5)
+
+    page = request.GET.get('page')
+    polls = paginator.get_page(page)
     context = {'polls': polls}
     return render(request, 'polls/polls_list.html', context)
 
