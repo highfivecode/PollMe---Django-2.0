@@ -70,4 +70,4 @@ A polling application built with Python and Django
 ### [Video 71 - Getting The Total Number Of Votes](https://github.com/highfivecode/PollMe---Django-2.0/tree/4a4ec70b9e88cb3b76d2aa8d541802883957a52c) 
 ### [Video 72 - Displaying Progress Bars](https://github.com/highfivecode/PollMe---Django-2.0/tree/63c0de683e5a2621d395f3bf7315405b72dbc9f2) 
 ### [Video 73 - Styling The Vote Page](https://github.com/highfivecode/PollMe---Django-2.0/tree/7fcfa858e64fcf1d82e581c7484f8702150c73f2) 
-
+### [Video 74 - Seeding The Database](https://github.com/highfivecode/PollMe---Django-2.0/tree/7fcfa858e64fcf1d82e581c7484f8702150c73f2) - No changes to code. We seeded the database with faked data using seeder.py
