@@ -53,7 +53,8 @@ def seed_polls(num_entries=10, choice_min=2, choice_max=5, overwrite=False):
             pub_date = datetime.datetime.now()
         )
         p.save()
-        for _ in range(choice_min, choice_max + 1):
+        num_choices = random.randrange(choice_min, choice_max +1)
+        for _ in range(num_choices):
             c = Choice(
                 poll = p,
                 choice_text = fake.sentence()
