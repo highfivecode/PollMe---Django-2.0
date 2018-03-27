@@ -21,6 +21,7 @@ def polls_list(request):
     currently available polls
     """
     polls = Poll.objects.all()
+    search_term=''
 
     if 'text' in request.GET:
         polls = polls.order_by('text')
@@ -31,7 +32,9 @@ def polls_list(request):
     if 'num_votes' in request.GET:
         polls = polls.annotate(Count('vote')).order_by('-vote__count')
 
-
+    if 'search' in request.GET:
+        search_term = request.GET['search']
+        polls = polls.filter(text__icontains=search_term)
 
     paginator = Paginator(polls, 5)
 
@@ -41,7 +44,7 @@ def polls_list(request):
     get_dict_copy = request.GET.copy()
     params = get_dict_copy.pop('page', True) and get_dict_copy.urlencode()
 
-    context = {'polls': polls, 'params': params}
+    context = {'polls': polls, 'params': params, 'search_term': search_term}
     return render(request, 'polls/polls_list.html', context)
 
 @login_required
