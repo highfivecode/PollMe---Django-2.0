@@ -5,6 +5,7 @@
   <h1 class='text-center'>Welcome to Poll List!</h1>
   <div class="row">
     <div class="col-sm-8 offset-sm-2">
+
       {% if messages %}
           {% for message in messages %}
           <div {% if message.tags %} class="{{ message.tags }}"{% endif %}>
@@ -15,7 +16,9 @@
           </div>
           {% endfor %}
       {% endif %}
+
       <a href="{% url 'polls:add' %}" class="btn btn-primary" style="margin-bottom: 5px">Add <i class="fas fa-plus"></i> </a>
+
       <ul class="list-group">
         {% for poll in polls %}
         <li class="list-group-item">
@@ -26,6 +29,25 @@
         </li>
         {% endfor %}
       </ul>
+
+      <div class="pagination">
+          <span class="step-links">
+              {% if polls.has_previous %}
+                  <a href="?page=1">&laquo; first</a>
+                  <a href="?page={{ polls.previous_page_number }}">previous</a>
+              {% endif %}
+
+              <span class="current">
+                  Page {{ polls.number }} of {{ polls.paginator.num_pages }}.
+              </span>
+
+              {% if polls.has_next %}
+                  <a href="?page={{ polls.next_page_number }}">next</a>
+                  <a href="?page={{ polls.paginator.num_pages }}">last &raquo;</a>
+              {% endif %}
+          </span>
+      </div>
+
     </div>
   </div>
 </div>
