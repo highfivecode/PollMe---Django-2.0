@@ -74,4 +74,5 @@ A polling application built with Python and Django
 ### [Video 75 - Django Pagination View](https://github.com/highfivecode/PollMe---Django-2.0/tree/0ee3c455d48283cc402c0ca9a4140cb1ea4f8efd) 
 ### [Video 76 - Django Pagination Template](https://github.com/highfivecode/PollMe---Django-2.0/tree/b1e02adaeb8b41548aaadcc31b80d6def94fb15a) 
 ### [Video 77 - Ordering The Polls List](https://github.com/highfivecode/PollMe---Django-2.0/tree/6e1e7813975c81ce7ad9ae32e015a63a947233ae) 
+### [Video 78 - Preserving Query Parameters When Using Paginator](https://github.com/highfivecode/PollMe---Django-2.0/tree/7f8078c398e8c03efdaa35b3d82695f98d6bc45e) 
 
