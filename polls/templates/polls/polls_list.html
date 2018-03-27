@@ -48,8 +48,8 @@
       <div class="pagination">
           <span class="step-links">
               {% if polls.has_previous %}
-                  <a href="?page=1">&laquo; first</a>
-                  <a href="?page={{ polls.previous_page_number }}">previous</a>
+                  <a href="?page=1&{{params}}">&laquo; first</a>
+                  <a href="?page={{ polls.previous_page_number }}&{{params}}">previous</a>
               {% endif %}
 
               <span class="current">
@@ -57,8 +57,8 @@
               </span>
 
               {% if polls.has_next %}
-                  <a href="?page={{ polls.next_page_number }}">next</a>
-                  <a href="?page={{ polls.paginator.num_pages }}">last &raquo;</a>
+                  <a href="?page={{ polls.next_page_number }}&{{params}}">next</a>
+                  <a href="?page={{ polls.paginator.num_pages }}&{{params}}">last &raquo;</a>
               {% endif %}
           </span>
       </div>

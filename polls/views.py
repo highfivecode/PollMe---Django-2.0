@@ -37,7 +37,11 @@ def polls_list(request):
 
     page = request.GET.get('page')
     polls = paginator.get_page(page)
-    context = {'polls': polls}
+
+    get_dict_copy = request.GET.copy()
+    params = get_dict_copy.pop('page', True) and get_dict_copy.urlencode()
+
+    context = {'polls': polls, 'params': params}
     return render(request, 'polls/polls_list.html', context)
 
 @login_required
