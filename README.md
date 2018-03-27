@@ -73,3 +73,5 @@ A polling application built with Python and Django
 ### [Video 74 - Seeding The Database](https://github.com/highfivecode/PollMe---Django-2.0/tree/7fcfa858e64fcf1d82e581c7484f8702150c73f2) - No changes to code. We seeded the database with faked data using seeder.py
 ### [Video 75 - Django Pagination View](https://github.com/highfivecode/PollMe---Django-2.0/tree/0ee3c455d48283cc402c0ca9a4140cb1ea4f8efd) 
 ### [Video 76 - Django Pagination Template](https://github.com/highfivecode/PollMe---Django-2.0/tree/b1e02adaeb8b41548aaadcc31b80d6def94fb15a) 
+### [Video 77 - Ordering The Polls List](https://github.com/highfivecode/PollMe---Django-2.0/tree/6e1e7813975c81ce7ad9ae32e015a63a947233ae) 
+
